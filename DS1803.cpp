@@ -57,7 +57,7 @@ int8_t *DS1803::getValue()
 	
 	int k=0;
 	while (Wire.available()) {
-		values[k]=Wire.receive();
+		values[k++]=Wire.receive();
 	}
 
 	return values;
